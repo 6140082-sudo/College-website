@@ -1,0 +1,166 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eaf2f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a5276;
+        }
+
+        form {
+            background-color: white;
+            width: 450px;
+            max-width: 100%;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .gender input {
+            width: auto;
+        }
+
+        .gender label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: normal;
+        }
+
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .submit {
+            background-color: #2874a6;
+        }
+
+        .reset {
+            background-color: #e74c3c;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        @media (max-width: 500px) {
+            body {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form action="#" method="post">
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name"
+               placeholder="Enter your full name" required>
+
+        <label for="roll">Roll Number:</label>
+        <input type="text" id="roll" name="roll"
+               placeholder="Enter your roll number" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+               placeholder="Enter your email" required>
+
+        <label for="phone">Mobile Number:</label>
+        <input type="tel" id="phone" name="phone"
+               placeholder="Enter mobile number"
+               pattern="[0-9]{10}" maxlength="10" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label>Gender:</label>
+        <div class="gender">
+            <label>
+                <input type="radio" name="gender"
+                       value="Male" required> Male
+            </label>
+
+            <label>
+                <input type="radio" name="gender"
+                       value="Female"> Female
+            </label>
+
+            <label>
+                <input type="radio" name="gender"
+                       value="Other"> Other
+            </label>
+        </div>
+
+        <label for="course">Select Course:</label>
+        <select id="course" name="course" required>
+            <option value="">-- Select Course --</option>
+            <option value="BCA">BCA</option>
+            <option value="BBA">BBA</option>
+            <option value="BSc">B.Sc.</option>
+            <option value="BCom">B.Com.</option>
+            <option value="BE">B.E.</option>
+            <option value="MCA">MCA</option>
+        </select>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address"
+                  rows="4" placeholder="Enter your address"
+                  required></textarea>
+
+        <div class="buttons">
+            <button type="submit" class="submit">
+                Register
+            </button>
+
+            <button type="reset" class="reset">
+                Reset
+            </button>
+        </div>
+
+    </form>
+
+</body>
+</html>
+```
